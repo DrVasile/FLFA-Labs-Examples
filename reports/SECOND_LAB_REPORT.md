@@ -1,7 +1,7 @@
 # The title of the work
 
 ### Course: Formal Languages & Finite Automata
-### Author: Vasile Drumea (Preferably yours!)
+### Author: Name Surname (Preferably yours!)
 
 ----
 
@@ -36,29 +36,3 @@ public static void main()
 
 
 ## References
-
-
-Finite Automaton
-
-Variable State : Q
-Storage : ""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
