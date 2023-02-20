@@ -8,5 +8,5 @@ public abstract class FiniteAutomaton
     private char initialState;
     private char[] finalStates;
 
-    public abstract boolean wordIsValid();
+    public abstract boolean wordIsValid(String word);
 }

@@ -10,7 +10,7 @@ public class Main
             @Override
             public String generateWord()
             {
-                return null;
+                return "Vasile";
             }
 
             @Override
@@ -20,12 +20,12 @@ public class Main
             }
         };
 
-        System.out.println(grammar.generateWord());
-        grammar.generateWord();
-        grammar.generateWord();
-        grammar.generateWord();
-        grammar.generateWord();
+//        System.out.println(grammar.generateWord());
+//        grammar.generateWord();
+//        grammar.generateWord();
+//        grammar.generateWord();
+//        grammar.generateWord();
 
-
+        // Show example of converting the grammar to FA.
     }
 }
