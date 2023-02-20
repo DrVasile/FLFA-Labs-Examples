@@ -1,31 +1,28 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 import automaton.FiniteAutomaton;
 import grammar.Grammar;
+import utils.GrammarReader;
 
 public class Main
 {
     public static void main(String[] args)
     {
-        Grammar grammar = new Grammar()
+        final File grammarInputFile = new File("resources/grammar_variants.txt");
+
+        try (final Scanner scanner = new Scanner(grammarInputFile))
         {
-            @Override
-            public String generateWord()
-            {
-                return "Vasile";
-            }
+            final Grammar grammar = GrammarReader.readNextGrammar(scanner);
 
-            @Override
-            public FiniteAutomaton toFiniteAutomaton()
-            {
-                return null;
-            }
-        };
+            for (int i = 0; i < 15; i++)
+                System.out.println(grammar.generateWord());
 
-//        System.out.println(grammar.generateWord());
-//        grammar.generateWord();
-//        grammar.generateWord();
-//        grammar.generateWord();
-//        grammar.generateWord();
-
-        // Show example of converting the grammar to FA.
+            System.out.println(grammar);
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
     }
 }
