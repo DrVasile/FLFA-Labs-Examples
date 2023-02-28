@@ -1,5 +1,7 @@
 package grammar;
 
+import automaton.Transition;
+
 public class Production
 {
     private String leftSide;
@@ -9,6 +11,12 @@ public class Production
     {
         this.leftSide = leftSide;
         this.rightSide = rightSide;
+    }
+
+    public Production(final Transition transition)
+    {
+        this.leftSide = transition.getCurrentState();
+        this.rightSide = transition.getTransitionLabel() + transition.getNextState();
     }
 
     public String getLeftSide()

@@ -2,7 +2,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import automaton.FiniteAutomaton;
 import grammar.Grammar;
 import utils.GrammarReader;
 

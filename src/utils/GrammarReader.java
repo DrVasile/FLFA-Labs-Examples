@@ -1,6 +1,7 @@
 package utils;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -40,7 +41,7 @@ public class GrammarReader
         } while (true);
 
 
-        return new Grammar(nonTerminalVariables, terminalVariables, productionList, "S");
+        return new Grammar(Arrays.asList(nonTerminalVariables), Arrays.asList(terminalVariables), productionList, "S");
     }
 
     private static Production parseProduction(final String currentLine)
